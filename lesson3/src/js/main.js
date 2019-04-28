@@ -7,19 +7,20 @@ let startBtn = document.getElementById('start'),
     incomeValue = document.getElementsByClassName('income-value')[0],
     monthsavingsValue = document.getElementsByClassName('monthsavings-value')[0],
     yearsavingsValue = document.getElementsByClassName('yearsavings-value')[0],
-
+    
     expensesItem = document.getElementsByClassName('expenses-item'),
     expensesBtn = document.getElementsByTagName('button')[0],
-    optionalExpensesBtn = document.getElementsByTagName('button')[1],
+	optionalExpensesBtn = document.getElementsByTagName('button')[1],
     countBtn = document.getElementsByTagName('button')[2],
     optionalexpensesItem = document.querySelectorAll('.optionalexpenses-item'),
-    incomeItem = document.querySelector('.choose-income'),
+  incomeItem = document.querySelector('.choose-income'),
     checkSavings = document.querySelector('#savings'),
     sumValue = document.querySelector('.choose-sum'),
     percentValue = document.querySelector('.choose-percent'),
     yearValue = document.querySelector('.year-value'),
     monthValue = document.querySelector('.month-value'),
     dayValue = document.querySelector('.day-value');
+
 
 let money, time;
 
@@ -112,31 +113,6 @@ for (let key in appData) {
 }
 
 
-// let i = 0;
-// while (i < 2) {
-//     let a = prompt('Введите обязательную статью расходов в этом месяце', ''),
-//         b = prompt('Во сколько обойдется?', '');
-//     if ((typeof (a)) === 'string' && (typeof (a)) != null && (typeof (b)) != null &&
-//         a != '' && b != '' && a.length < 50) {
-//         console.log('OK');
-//         appData.expenses[a] = b;
-//     } else {
-//        i--;
-//     }
 
-//     i++;
-// }
 
-// let i = 0;
-// do {
-//     let a = prompt('Введите обязательную статью расходов в этом месяце', ''),
-//         b = prompt('Во сколько обойдется?', '');
-//     if ((typeof (a)) === 'string' && (typeof (a)) != null && (typeof (b)) != null &&
-//         a != '' && b != '' && a.length < 50) {
-//         console.log('OK');
-//         appData.expenses[a] = b;
-//     } else {
-//         i--;
-//     }
-//     i++;
-// } while (i < 2);
+   
