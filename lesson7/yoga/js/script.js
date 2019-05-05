@@ -85,4 +85,38 @@ window.addEventListener('DOMContentLoaded', function () {
 
     setClock('timer', deadLine);
 
+    // Modal
+
+    let more = document.querySelector('.more'),
+        overlay = document.querySelector('.overlay'),
+        close = document.querySelector('.popup-close'),
+        desBtn = document.getElementsByClassName('description-btn');
+
+    more.addEventListener('click', function () {
+        overlay.style.display = 'block';
+        this.classList.add('more-splash'); //Добавление анимации
+        document.body.style.overflow = 'hidden'; //Запрет прокрутки
+    });
+    close.addEventListener('click', function () {
+        overlay.style.display = 'none';
+        more.classList.remove('more-splash');
+        document.body.style.overflow = ''; //Снятие запрета прокрутки
+    });
+
+    function clickTabMore() {
+        for (let i = 0; i < desBtn.length; i++) {
+            desBtn[i].addEventListener('click', function () {
+                overlay.style.display = 'block';
+                this.classList.add('more-splash');
+                document.body.style.overflow = 'hidden';
+            });
+            close.addEventListener('click', function () {
+                overlay.style.display = 'none';
+                desBtn[i].classList.remove('more-splash');
+                document.body.style.overflow = '';
+            });
+        }
+    }
+    clickTabMore();
+
 });
